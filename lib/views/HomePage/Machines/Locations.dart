@@ -23,14 +23,6 @@ class _MachinesState extends State<Machines> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                'Nearest Drop-offs',
-                style: GoogleFonts.montserrat(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 15,
-                  color: AppColors.textColor,
-                ),
-              ),
               SizedBox(
                 height: 20,
               ),
@@ -73,7 +65,7 @@ class _MachinesState extends State<Machines> {
               ),
               SizedBox(height: 20),
               Text(
-                'Nearest Reverse Vending Machine',
+                'Nearest Trash2Cash Machines',
                 style: GoogleFonts.montserrat(
                   fontWeight: FontWeight.w400,
                   fontSize: 15,
@@ -86,7 +78,7 @@ class _MachinesState extends State<Machines> {
               const RVM(),
               const RVMB(),
               Text(
-                'Nearest Collection Point',
+                'Nearest Drop-Off Points',
                 style: GoogleFonts.montserrat(
                   fontWeight: FontWeight.w400,
                   fontSize: 15,

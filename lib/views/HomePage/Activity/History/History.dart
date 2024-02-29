@@ -70,27 +70,6 @@ class _HistoryState extends State<History> {
               ),
             ),
           ),
-          Positioned(
-            right: 15,
-            top: 20,
-            child: ElevatedButton(
-              onPressed: () {},
-              style: ElevatedButton.styleFrom(
-                foregroundColor: Colors.white,
-                backgroundColor: const Color.fromARGB(255, 203, 224, 227),
-                side: BorderSide(
-                  color: const Color.fromARGB(255, 255, 255, 255),
-                  width: 1.5,
-                ),
-              ),
-              child: Text(
-                'VIEW',
-                style: TextStyle(
-                  color: Colors.white,
-                ),
-              ),
-            ),
-          ),
         ],
       ),
     );

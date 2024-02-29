@@ -90,27 +90,6 @@ class _OngoingState extends State<Ongoing> {
               ),
             ),
           ),
-          Positioned(
-            right: 15,
-            top: 20,
-            child: ElevatedButton(
-              onPressed: () {},
-              style: ElevatedButton.styleFrom(
-                foregroundColor: Colors.white,
-                backgroundColor: const Color.fromARGB(255, 255, 122, 0),
-                side: BorderSide(
-                  color: const Color.fromARGB(255, 255, 255, 255),
-                  width: 1.5,
-                ),
-              ),
-              child: Text(
-                'VIEW',
-                style: TextStyle(
-                  color: Colors.white,
-                ),
-              ),
-            ),
-          ),
         ],
       ),
     );

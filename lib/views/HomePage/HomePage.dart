@@ -4,6 +4,7 @@ import 'package:trashtocash/views/HomePage/Home/Home.dart';
 import 'package:trashtocash/views/HomePage/Machines/Locations.dart';
 import 'package:trashtocash/views/HomePage/NavBar.dart';
 import 'package:trashtocash/views/HomePage/Activity/PickUp.dart';
+import 'package:trashtocash/views/HomePage/Profile/Profile.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -20,7 +21,7 @@ class _HomePageState extends State<HomePage> {
     Machines(),
     Center(child: Text("Pick ups")),
     Activity(),
-    Center(child: Text("Profile")),
+    Profile(),
   ];
 
   @override
@@ -28,6 +29,13 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       drawer: NavBar(),
       appBar: AppBar(
+        leading: Builder(builder: (context) {
+          return IconButton(
+            onPressed: () => Scaffold.of(context).openDrawer(),
+            icon: Icon(Icons.menu),
+            color: AppColors.iconColor,
+          );
+        }),
         title: Row(
           children: [
             Spacer(),
@@ -53,7 +61,7 @@ class _HomePageState extends State<HomePage> {
       body: screens[index],
       bottomNavigationBar: NavigationBarTheme(
         data: NavigationBarThemeData(
-          // indicatorColor: const Color.fromARGB(255, 225, 122, 0),
+          indicatorColor: Color.fromARGB(255, 255, 255, 255),
           labelTextStyle: MaterialStateProperty.all(
             TextStyle(
               fontSize: 15,
@@ -63,8 +71,8 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
         child: NavigationBar(
-          height: 80,
-          backgroundColor: Color.fromARGB(255, 255, 255, 255),
+          height: 75,
+          backgroundColor: Color.fromARGB(255, 255, 254, 254),
           selectedIndex: index,
           // animationDuration: Duration(seconds: 1),
           onDestinationSelected: (index) => setState(() => this.index = index),
@@ -72,7 +80,7 @@ class _HomePageState extends State<HomePage> {
             NavigationDestination(
               icon: Icon(
                 Icons.home_outlined,
-                size: 35,
+                size: 30,
                 color: Color.fromARGB(255, 15, 108, 133),
               ),
               label: "Home",
@@ -80,7 +88,7 @@ class _HomePageState extends State<HomePage> {
             NavigationDestination(
               icon: Icon(
                 Icons.location_on_outlined,
-                size: 35,
+                size: 30,
                 color: Color.fromARGB(255, 15, 108, 133),
               ),
               label: "Machines",
@@ -88,7 +96,7 @@ class _HomePageState extends State<HomePage> {
             NavigationDestination(
               icon: Icon(
                 Icons.add_circle_sharp,
-                size: 35,
+                size: 30,
                 color: Color.fromARGB(255, 15, 108, 133),
               ),
               label: "Pick ups",
@@ -96,7 +104,7 @@ class _HomePageState extends State<HomePage> {
             NavigationDestination(
               icon: Icon(
                 Icons.menu,
-                size: 35,
+                size: 30,
                 color: Color.fromARGB(255, 15, 108, 133),
               ),
               label: "Activity",

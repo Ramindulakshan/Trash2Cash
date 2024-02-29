@@ -58,10 +58,10 @@ class _RVMBState extends State<RVMB> {
             left: 85,
             top: 15,
             child: Text(
-              '09/10/2021',
+              'Keells Super, Colombo',
               style: GoogleFonts.poppins(
                 fontWeight: FontWeight.w600,
-                fontSize: 12,
+                fontSize: 15,
                 color: Color.fromARGB(255, 255, 255, 255),
               ),
             ),
@@ -70,9 +70,9 @@ class _RVMBState extends State<RVMB> {
             left: 85,
             top: 33,
             child: Text(
-              '15 Mins - 30 Mins',
+              '15 Mins Away',
               style: GoogleFonts.poppins(
-                fontWeight: FontWeight.w600,
+                fontWeight: FontWeight.w400,
                 fontSize: 17,
                 color: Color.fromARGB(255, 255, 255, 255),
               ),
@@ -82,32 +82,11 @@ class _RVMBState extends State<RVMB> {
             left: 85,
             top: 55,
             child: Text(
-              'ETA',
+              '15KM away',
               style: GoogleFonts.poppins(
-                fontWeight: FontWeight.w600,
-                fontSize: 12,
+                fontWeight: FontWeight.w500,
+                fontSize: 11,
                 color: Color.fromARGB(255, 255, 255, 255),
-              ),
-            ),
-          ),
-          Positioned(
-            right: 15,
-            top: 20,
-            child: ElevatedButton(
-              onPressed: () {},
-              style: ElevatedButton.styleFrom(
-                foregroundColor: Colors.white,
-                backgroundColor: const Color.fromARGB(255, 203, 224, 227),
-                side: BorderSide(
-                  color: const Color.fromARGB(255, 255, 255, 255),
-                  width: 1.5,
-                ),
-              ),
-              child: Text(
-                'VIEW',
-                style: TextStyle(
-                  color: Colors.white,
-                ),
               ),
             ),
           ),

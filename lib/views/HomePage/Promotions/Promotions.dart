@@ -65,7 +65,7 @@ class _PromotionsState extends State<Promotions> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Redeeemables',
+                'Latest offers',
                 style: GoogleFonts.montserrat(
                   fontWeight: FontWeight.w400,
                   fontSize: 15,
@@ -110,36 +110,36 @@ class _PromotionsState extends State<Promotions> {
               SizedBox(
                 height: 20,
               ),
-              Text(
-                'Latest Redeemables',
-                style: GoogleFonts.montserrat(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 15,
-                  color: AppColors.textColor,
-                ),
-              ),
+              // Text(
+              //   'Latest Offers',
+              //   style: GoogleFonts.montserrat(
+              //     fontWeight: FontWeight.w400,
+              //     fontSize: 15,
+              //     color: AppColors.textColor,
+              //   ),
+              // ),
               SizedBox(
                 height: 10,
               ),
-              Container(
-                // margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-                height: 100,
-                width: MediaQuery.of(context).size.width,
-                child: ListView(
-                  scrollDirection: Axis.horizontal,
-                  children: [
-                    LRedeemables(),
-                    LRedeemables(),
-                    LRedeemables(),
-                  ],
-                ),
-              ),
+              // Container(
+              //   // margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+              //   height: 100,
+              //   width: MediaQuery.of(context).size.width,
+              //   child: ListView(
+              //     scrollDirection: Axis.horizontal,
+              //     children: [
+              //       LRedeemables(),
+              //       LRedeemables(),
+              //       LRedeemables(),
+              //     ],
+              //   ),
+              // ),
 
               Row(
                 children: [
                   Expanded(
                     child: Text(
-                      'All Redeemables',
+                      'All Offers',
                       style: GoogleFonts.montserrat(
                         fontWeight: FontWeight.w400,
                         fontSize: 15,
@@ -171,6 +171,10 @@ class _PromotionsState extends State<Promotions> {
               const ARedeemables(),
               const ARedeemables(),
               const ARedeemables(),
+              const ARedeemables(),
+              const ARedeemables(),
+              const ARedeemables(),
+
               // const History(),
             ],
           ),

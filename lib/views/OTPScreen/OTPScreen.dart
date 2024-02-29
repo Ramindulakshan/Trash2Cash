@@ -346,43 +346,40 @@ class _OTPScreenState extends State<OTPScreen> {
                       ),
                     ),
                     SizedBox(width: 8),
-                    ElevatedButton(
-                      onPressed: () {
-                        if (phoneController.text == '') {
-                          showDialog(
-                            context: context,
-                            builder: (BuildContext context) {
-                              return AlertDialog(
-                                title: Text('WARNING !'),
-                                content: Text(
-                                    'The phone number field cannot be empty.'),
-                                actions: <Widget>[
-                                  GestureDetector(
-                                    onTap: () {
-                                      // Close the dialog
-                                      Navigator.of(context).pop();
-                                    },
-                                    child: Text('OK'),
-                                  ),
-                                ],
-                              );
-                            },
-                          );
-                        } else {
-                          _checkNumber();
-                          startCountdown();
-                        }
-                      },
-                      child: Text("Verify".toUpperCase()),
-                    ),
+                    // ElevatedButton(
+                    //   onPressed: () {
+                    //     if (phoneController.text == '') {
+                    //       showDialog(
+                    //         context: context,
+                    //         builder: (BuildContext context) {
+                    //           return AlertDialog(
+                    //             title: Text('WARNING !'),
+                    //             content: Text(
+                    //                 'The phone number field cannot be empty.'),
+                    //             actions: <Widget>[
+                    //               GestureDetector(
+                    //                 onTap: () {
+                    //                   // Close the dialog
+                    //                   Navigator.of(context).pop();
+                    //                 },
+                    //                 child: Text('OK'),
+                    //               ),
+                    //             ],
+                    //           );
+                    //         },
+                    //       );
+                    //     } else {
+                    //       _checkNumber();
+                    //       startCountdown();
+                    //     }
+                    //   },
+                    //   child: Text("Verify".toUpperCase()),
+                    // ),
                   ],
                 ),
               ),
               SizedBox(
-                height: 30,
-              ),
-              SizedBox(
-                height: 30,
+                height: 60,
               ),
               pinput,
               SizedBox(

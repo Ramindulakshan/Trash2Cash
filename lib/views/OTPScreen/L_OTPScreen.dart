@@ -136,15 +136,15 @@ class _LOTPScreenState extends State<LOTPScreen> {
       appBar: AppBar(
           title: Row(
             children: [
-              // GestureDetector(
-              //   onTap: () {
-              //     // Navigator.pushReplacementNamed(context, '/signup');
-              //   },
-              //   child: Icon(
-              //     Icons.arrow_back,
-              //     color: AppColors.iconColor,
-              //   ),
-              // ),
+              GestureDetector(
+                onTap: () {
+                  // Navigator.pushReplacementNamed(context, '/signup');
+                },
+                child: Icon(
+                  Icons.arrow_back,
+                  color: AppColors.iconColor,
+                ),
+              ),
               Spacer(),
               SizedBox(
                 width: 150,
@@ -200,7 +200,7 @@ class _LOTPScreenState extends State<LOTPScreen> {
                         text: 'Enter the code from the sms we sent to ',
                       ),
                       TextSpan(
-                        text: 'your mobile number',
+                        text: '+94  713891285',
                         style: TextStyle(
                           color: const Color.fromARGB(255, 49, 54, 70),
                           fontWeight: FontWeight.w700,

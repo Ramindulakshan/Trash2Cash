@@ -17,9 +17,14 @@ class _NotificationsState extends State<Notifications> {
       appBar: AppBar(
         title: Row(
           children: [
-            Icon(
-              Icons.arrow_back,
-              color: AppColors.iconColor,
+            GestureDetector(
+              onTap: () {
+                Navigator.pushReplacementNamed(context, '/homepage');
+              },
+              child: Icon(
+                Icons.arrow_back,
+                color: AppColors.iconColor,
+              ),
             ),
             SizedBox(
               width: 5,

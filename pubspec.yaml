@@ -48,6 +48,11 @@ dependencies:
   firebase_storage: ^11.6.5
   firebase_core: ^2.25.4
   firebase_auth: ^4.17.4
+  permission_handler: ^11.2.0
+  pie_chart: ^5.4.0
+  flutter_launcher_icons: ^0.13.1
+  google_maps_flutter: ^2.5.3
+  table_calendar: ^3.0.9
 
 dev_dependencies:
   flutter_test:

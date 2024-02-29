@@ -13,8 +13,9 @@ class _NavBarState extends State<NavBar> {
   Widget build(BuildContext context) {
     return Drawer(
       child: Container(
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
           color: Color.fromARGB(232, 15, 108, 133),
+          // color: Colors.black.withOpacity(0.1),
         ),
         child: Stack(
           children: <Widget>[
@@ -60,7 +61,7 @@ class _NavBarState extends State<NavBar> {
                     ),
                   ),
                   onTap: () {
-                    // Do something
+                    Navigator.pushReplacementNamed(context, '/howToWork');
                   },
                 ),
                 ListTile(
@@ -78,7 +79,7 @@ class _NavBarState extends State<NavBar> {
                     ),
                   ),
                   onTap: () {
-                    // Do something
+                    Navigator.pushReplacementNamed(context, '/support');
                   },
                 ),
                 ListTile(
@@ -96,7 +97,7 @@ class _NavBarState extends State<NavBar> {
                     ),
                   ),
                   onTap: () {
-                    // Do something
+                    Navigator.pushReplacementNamed(context, '/inviteAFriend');
                   },
                 ),
                 ListTile(
@@ -114,7 +115,8 @@ class _NavBarState extends State<NavBar> {
                     ),
                   ),
                   onTap: () {
-                    // Do something
+                    Navigator.pushReplacementNamed(
+                        context, '/termsConditions2');
                   },
                 ),
                 ListTile(

@@ -285,7 +285,9 @@ class _RegisterPageState extends State<RegisterPage> {
                         labelText: "ENTER EMAIL *"),
                     CustomTextField(
                         controller: otpController,
-                        labelText: "ENTER MOBILE FOR GET OTP *"),
+                        labelText:
+                            "Enter your mobile number to receive an OTP *"
+                                .toUpperCase()),
                     CheckboxListTile(
                       title: RichText(
                         text: TextSpan(
@@ -374,7 +376,7 @@ class _RegisterPageState extends State<RegisterPage> {
                         }
                       },
                       child: CustomButton(
-                        text: "NEXT",
+                        text: "SIGN UP",
                         height: 41,
                         width: screenWidth,
                         backgroundColor: AppColors.accentColor,

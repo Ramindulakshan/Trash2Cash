@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:pie_chart/pie_chart.dart';
 import 'package:trashtocash/constants/Colors.dart';
 import 'package:trashtocash/views/HomePage/Promotions/LRedeemables/LRedeemables.dart';
 import 'package:trashtocash/widgets/custom_button.dart';
@@ -12,29 +13,55 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  Map<String, double> dataMap = {
+    "T2C Home Points": 40,
+    "T2C Machine Points": 40,
+    "T2C Drop Off Points": 30,
+  };
+
+  List<Color> colorList = [
+    Color.fromARGB(255, 98, 187, 71),
+    Color.fromARGB(255, 255, 122, 0),
+    Color.fromARGB(255, 15, 108, 133),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
-          margin: EdgeInsets.symmetric(horizontal: 25),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
-                height: 120,
+                height: 440,
                 child: Stack(
                   children: [
                     Positioned(
-                      right: 30,
-                      left: 30,
+                      right: 0,
+                      left: 0,
+                      top: 0,
+                      child: Container(
+                        height: 265,
+                        decoration: BoxDecoration(
+                          color: Color.fromARGB(255, 203, 224, 227),
+                          borderRadius: BorderRadius.only(
+                            bottomLeft: Radius.circular(0.0),
+                            bottomRight: Radius.circular(0.0),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      right: 60,
+                      left: 60,
                       top: 15,
                       child: Container(
                         height: 85,
                         decoration: BoxDecoration(
-                          color: Color.fromARGB(45, 15, 108, 133),
+                          color: Color.fromARGB(255, 255, 255, 255),
                           border: Border.all(
-                            color: Color.fromARGB(45, 15, 108, 133),
+                            color: Color.fromARGB(255, 255, 255, 255),
                             width: 1.0,
                           ),
                           borderRadius: BorderRadius.circular(30.0),
@@ -42,17 +69,13 @@ class _HomeState extends State<Home> {
                       ),
                     ),
                     Positioned(
-                      right: 50,
+                      right: 80,
                       top: 30,
                       child: Container(
                         width: 60,
                         height: 55,
                         decoration: BoxDecoration(
-                          color: Color.fromARGB(255, 255, 255, 255),
-                          border: Border.all(
-                            color: Color.fromARGB(255, 255, 255, 255),
-                            width: 1.0,
-                          ),
+                          color: Color.fromARGB(255, 203, 224, 227),
                           borderRadius: BorderRadius.circular(100.0),
                         ),
                         child: Image.asset(
@@ -62,7 +85,7 @@ class _HomeState extends State<Home> {
                       ),
                     ),
                     Positioned(
-                      left: 65,
+                      left: 85,
                       top: 33,
                       child: Text(
                         'Himesh Fernando',
@@ -74,7 +97,7 @@ class _HomeState extends State<Home> {
                       ),
                     ),
                     Positioned(
-                      left: 65,
+                      left: 85,
                       top: 55,
                       child: Text(
                         '+94 712352678',
@@ -85,24 +108,17 @@ class _HomeState extends State<Home> {
                         ),
                       ),
                     ),
-                  ],
-                ),
-              ),
-              Container(
-                height: 275,
-                child: Stack(
-                  children: [
                     Positioned(
-                      right: 30,
-                      left: 30,
-                      top: 15,
-                      bottom: 0,
+                      right: 60,
+                      left: 60,
+                      top: 130,
+                      bottom: 45,
                       child: Container(
                         height: 85,
                         decoration: BoxDecoration(
-                          color: Color.fromARGB(45, 15, 108, 133),
+                          color: Color.fromARGB(255, 255, 255, 255),
                           border: Border.all(
-                            color: Color.fromARGB(45, 15, 108, 133),
+                            color: Color.fromARGB(255, 255, 255, 255),
                             width: 1.0,
                           ),
                           borderRadius: BorderRadius.circular(30.0),
@@ -110,44 +126,33 @@ class _HomeState extends State<Home> {
                       ),
                     ),
                     Positioned(
-                      left: 70,
-                      right: 70,
-                      top: 40,
-                      bottom: 30,
-                      child: CircularProgressIndicator(
-                        color: const Color.fromARGB(255, 15, 108, 133),
-                        backgroundColor: Color.fromARGB(71, 15, 108, 133),
-                        value: 0.25,
-                        strokeWidth: 14,
+                      left: 0,
+                      right: 0,
+                      bottom: 0,
+                      child: PieChart(
+                        dataMap: dataMap,
+                        colorList: colorList,
+                        chartRadius: 190,
+                        initialAngleInDegree: 270,
+                        chartType: ChartType.ring,
+                        ringStrokeWidth: 14,
+                        animationDuration: Duration(seconds: 2),
+                        chartValuesOptions: ChartValuesOptions(
+                          showChartValues: false,
+                        ),
+                        legendOptions: LegendOptions(
+                          showLegends: true,
+                          legendTextStyle: TextStyle(fontSize: 8),
+                          legendPosition: LegendPosition.bottom,
+                          showLegendsInRow: true,
+                        ),
                       ),
                     ),
-                    // Positioned(
-                    //   left: 90,
-                    //   right: 90,
-                    //   top: 60,
-                    //   bottom: 50,
-                    //   child: CircularProgressIndicator(
-                    //     color: const Color.fromARGB(255, 255, 122, 0),
-                    //     backgroundColor: Color.fromARGB(75, 255, 123, 0),
-                    //     value: 0.6,
-                    //     strokeWidth: 10,
-                    //   ),
-                    // ),
-                    // Positioned(
-                    //   left: 110,
-                    //   right: 110,
-                    //   top: 80,
-                    //   bottom: 70,
-                    //   child: CircularProgressIndicator(
-                    //     color: const Color.fromARGB(255, 98, 187, 71),
-                    //     backgroundColor: Color.fromARGB(73, 98, 187, 71),
-                    //     value: 0.4,
-                    //     strokeWidth: 10,
-                    //   ),
-                    // ),
                     Positioned(
-                      left: 160,
-                      top: 100,
+                      left: 0,
+                      right: 0,
+                      // top: 100,
+                      bottom: 205,
                       child: Icon(
                         Icons.currency_exchange,
                         color: const Color.fromARGB(255, 15, 108, 133),
@@ -155,16 +160,17 @@ class _HomeState extends State<Home> {
                       ),
                     ),
                     Positioned(
-                      left: 160,
-                      top: 130,
-                      bottom: 0,
+                      left: 0,
+                      right: 0,
+                      bottom: 140,
+                      // bottom: 0,
                       child: Column(
                         children: [
                           Text(
                             '540',
                             style: GoogleFonts.poppins(
                               fontWeight: FontWeight.w500,
-                              fontSize: 23,
+                              fontSize: 26,
                               color: Color.fromARGB(255, 15, 108, 133),
                             ),
                           ),
@@ -172,7 +178,7 @@ class _HomeState extends State<Home> {
                             'T2C Points',
                             style: GoogleFonts.poppins(
                               fontWeight: FontWeight.w400,
-                              fontSize: 12,
+                              fontSize: 15,
                               color: Color.fromARGB(188, 15, 108, 133),
                             ),
                           ),
@@ -182,67 +188,15 @@ class _HomeState extends State<Home> {
                   ],
                 ),
               ),
-
               SizedBox(
                 height: 20,
               ),
               Row(
                 children: [
                   Spacer(),
-                  Icon(
-                    Icons.water_drop,
-                    color: const Color.fromARGB(255, 98, 187, 71),
-                    size: 14,
-                  ),
-                  Text(
-                    ' T2C Home Points ',
-                    style: GoogleFonts.montserrat(
-                      fontWeight: FontWeight.w500,
-                      fontSize: 9,
-                      color: AppColors.textColor,
-                    ),
-                  ),
-                  Spacer(),
-                  Icon(
-                    Icons.water_drop,
-                    color: const Color.fromARGB(255, 255, 122, 0),
-                    size: 14,
-                  ),
-                  Text(
-                    '  T2C Machine Points ',
-                    style: GoogleFonts.montserrat(
-                      fontWeight: FontWeight.w500,
-                      fontSize: 9,
-                      color: AppColors.textColor,
-                    ),
-                  ),
-                  Spacer(),
-                  Icon(
-                    Icons.water_drop,
-                    color: const Color.fromARGB(255, 15, 108, 133),
-                    size: 14,
-                  ),
-                  Text(
-                    ' T2C Drop Off Points ',
-                    style: GoogleFonts.montserrat(
-                      fontWeight: FontWeight.w500,
-                      fontSize: 9,
-                      color: AppColors.textColor,
-                    ),
-                  ),
-                  Spacer(),
-                ],
-              ),
-              SizedBox(
-                height: 30,
-              ),
-
-              Row(
-                children: [
-                  Spacer(),
                   GestureDetector(
                     onTap: () {
-                      // Navigator.pushReplacementNamed(context, '/signup');
+                      Navigator.pushReplacementNamed(context, '/historyCR');
                     },
                     child: CustomButton(
                       text: "credit history".toUpperCase(),
@@ -254,7 +208,7 @@ class _HomeState extends State<Home> {
                   Spacer(),
                   GestureDetector(
                     onTap: () {
-                      // Navigator.pushReplacementNamed(context, '/signup');
+                      Navigator.pushReplacementNamed(context, '/historyCR');
                     },
                     child: CustomButton(
                       text: "redeem history".toUpperCase(),
@@ -267,39 +221,39 @@ class _HomeState extends State<Home> {
                 ],
               ),
               SizedBox(
-                height: 30,
+                height: 20,
               ),
-              Row(
-                children: [
-                  Text(
-                    'Offers for you',
-                    style: GoogleFonts.montserrat(
-                      fontWeight: FontWeight.w500,
-                      fontSize: 14,
-                      color: AppColors.textColor,
-                    ),
-                  ),
-                  Spacer(),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.pushReplacementNamed(context, '/promotions');
-                    },
-                    child: Text(
-                      'View all offers >',
+              Container(
+                margin: EdgeInsets.symmetric(horizontal: 20),
+                child: Row(
+                  children: [
+                    Text(
+                      'Offers for you',
                       style: GoogleFonts.montserrat(
-                        fontWeight: FontWeight.w400,
+                        fontWeight: FontWeight.w500,
                         fontSize: 14,
                         color: AppColors.textColor,
                       ),
                     ),
-                  ),
-                ],
-              ),
-              SizedBox(
-                height: 10,
+                    Spacer(),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pushReplacementNamed(context, '/promotions');
+                      },
+                      child: Text(
+                        'View all offers >',
+                        style: GoogleFonts.montserrat(
+                          fontWeight: FontWeight.w400,
+                          fontSize: 14,
+                          color: AppColors.textColor,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
               Container(
-                // margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
                 height: 100,
                 width: MediaQuery.of(context).size.width,
                 child: ListView(
@@ -311,14 +265,9 @@ class _HomeState extends State<Home> {
                   ],
                 ),
               ),
-
               SizedBox(
                 height: 10,
               ),
-              // const ARedeemables(),
-              // const ARedeemables(),
-              // const ARedeemables(),
-              // const History(),
             ],
           ),
         ),
